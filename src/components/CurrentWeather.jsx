@@ -28,13 +28,13 @@ export default function CurrentWeather(props) {
 	if(!loaded) return null;
 
 	return (
-		<div className="rounded-lg bg-purple-600 p-3 mb-4">
+		<div className="rounded-lg bg-indigo-800 p-3 mb-4">
 			<div className="flex items-center justify-between">
 				<div className="">
-					<div className="text-zinc-50 font-bold">{weather.location.name}, {weather.location.region}</div>
-					<div className="text-purple-100 mb-4">{getTodaysDate()}</div>
+					<div className="text-gray-200 font-bold">{weather.location.name}, {weather.location.region}</div>
+					<div className="text-gray-200 mb-4">{getTodaysDate()}</div>
 					<div className="font-bold text-xl mb-4 text-white">{weather.current.condition.text}</div>
-					<div className="text-7xl font-bold mb-4 text-white">{weather.current.temp_c}<span className="text-purple-100 text-2xl">&deg;c</span></div>
+					<div className="text-7xl font-bold mb-4 text-white">{weather.current.temp_c}<span className="text-gray-100 text-2xl">&deg;c</span></div>
 				</div> 
 				<div>
 					<img src={getWeatherIcon(weather.current.condition.code)} className="w-52 h-auto" /> 
