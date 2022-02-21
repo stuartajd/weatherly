@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
+import WeatherAlerts from './components/WeatherAlerts';
 import CurrentWeather from './components/CurrentWeather';
 import FiveDayForecast from './components/FiveDayForecast';
 import Loading from './components/Loading';
@@ -32,7 +33,8 @@ function App() {
     <main className="max-w-md my-8 mx-auto">
 		{locationError !== null && <LocationErrorMessage locationError={locationError} />}
 		{(!loaded && locationError === null) && <Loading />}
-
+		
+		<WeatherAlerts loaded={loaded} weather={weather} />
 		<CurrentWeather loaded={loaded} weather={weather} />
 		<FiveDayForecast loaded={loaded} weather={weather} />
 
