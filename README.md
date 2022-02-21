@@ -1,15 +1,23 @@
-Generate API key from: https://www.weatherapi.com
+# Weatherly
+A weather dashboard that gives you the current & next 5 days weather forecast - built in React and a sprinkling of Tailwind CSS.
 
-## Running React on Repl.it
+To get this going, you'll need to generate an API key from: https://www.weatherapi.com
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+### How does it work?
+Using the GeoLocation Browser API, it will get your Lat & Long for the device you're viewing from. The free WeatherAPI is used to get the forecast & this is then formatted and made pretty!
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
+### How do I get it working?
 
-Using the two in conjunction is one of the fastest ways to build a web app.
+```
+git clone git@github.com:stuartajd/weatherly.git
+cd weatherly
+npm install
+cp example.config.jsx config.jsx
+npm run dev
+```
 
-### Getting Started
-- Hit run
-- Edit [App.jsx](#src/App.jsx) and watch it live update!
+### Can I suggest things?
+Yes!
 
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the `.replit` file.
+### What does it look like?
+![Weatherly Widget](./readme/weatherly.gif)
