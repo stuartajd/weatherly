@@ -1,7 +1,7 @@
 import {config} from '../config';
 
 async function getWeatherForecast(latitude, longitude) {
-	const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${config.api_key}&q=${latitude},${longitude}&aqi=no&days=3`);
+	const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${config.api_key}&q=${latitude},${longitude}&aqi=yes&alerts=yes&days=3`);
 	return response.json();
 }  
 
