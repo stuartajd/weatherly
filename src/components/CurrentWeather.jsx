@@ -23,7 +23,7 @@ export default function CurrentWeather(props) {
 				return !isSameDate || (isSameDate && forecastDate.getHours() >= dateRightNow.getHours())
 			}).splice(0, 12);
 		setHourlyForecast(remainingHours);
-	}, [weather]);
+	}, [loaded, weather]);
 
 	if(!loaded) return null;
 

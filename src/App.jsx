@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 import CurrentWeather from './components/CurrentWeather';
 import FiveDayForecast from './components/FiveDayForecast';
+import Loading from './components/Loading';
 import LocationErrorMessage from './components/LocationErrorMessage';
 
 import {getWeatherForecast} from './services/weather';
@@ -30,6 +31,7 @@ function App() {
   return (
     <main className="max-w-md my-8 mx-auto">
 		{locationError !== null && <LocationErrorMessage locationError={locationError} />}
+		{(!loaded && locationError === null) && <Loading />}
 
 		<CurrentWeather loaded={loaded} weather={weather} />
 		<FiveDayForecast loaded={loaded} weather={weather} />
